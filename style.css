@@ -291,6 +291,16 @@ body{
         z-index: 1;
     }
 }
+@media screen and (width:425px) {
+    .slider-text{
+        margin-left: 30%;
+    }
+}
+@media screen and (width:375px) {
+    .slider-text{
+        margin-left: 25%;
+    }
+}
 /* brands */
 .brand{
     margin: 2rem;
@@ -1046,6 +1056,10 @@ body{
     font-size: xx-large;
     font-weight: 500;
 }
+.occasion p, .arrivals p, .colors p{
+    display: flex;
+    gap: 10px;
+}
 .colors{
     display: flex;
     flex-direction: column;
@@ -1118,6 +1132,13 @@ body{
     .occasion h1{
         font-size: 12px;
         font-weight: 500;
+    }
+    .occasion p, .arrivals p, .colors p{
+        display: flex;
+        gap: 5px;
+    }
+    .colors input, .occasion input, .arrivals input{
+        width: 11px;
     }
     .occasion p, .colors p, .arrivals p{
         font-size: 8px;
@@ -1260,8 +1281,12 @@ body{
 }
 
 @media screen and (max-width:600px) {
+    .contact-container{
+        width: 95%;
+        margin: 0.5rem;
+    }
     .iform{
-        background-color: rgb(15,15,27);
+        background-color: rgb(15, 15, 27);
         color: white;
         width: 100%;
         /* height: 120vh; */
@@ -1272,12 +1297,15 @@ body{
         padding: 10px;
     }
     .iform h3{
-        color: azure;
+        color: white;
         font-size: 14px;
         margin-top: 10px;
         margin-bottom: 10px;
     }
     .iform h4, .iform input, #textarea, .iform button{
         font-size: 12px;
+    }
+    .iform input, #textarea{
+        border: 2px solid silver;
     }
 }

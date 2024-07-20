@@ -126,6 +126,7 @@ body{
     height: 100vh;
     position: fixed; top: 0; 
     z-index: 5;  
+
 }
 #menubar-close{
     padding: 1em;
@@ -952,6 +953,11 @@ body{
     background-color: black; color: white;
     border-radius: 10px;
 }
+.subscribe:hover{
+    background-color: grey;
+    color: black;
+    
+}
 @media screen and (max-width:800px) {
     .news-text{
         gap: 10px;
@@ -994,6 +1000,7 @@ body{
         border-radius: 10px;
     }
 }
+/* footer */
 /* contact */
 .contact{
     margin-top: 2rem;
@@ -1059,6 +1066,8 @@ body{
 .occasion p, .arrivals p, .colors p{
     display: flex;
     gap: 10px;
+    /* justify-content: center; */
+    align-items: center;
 }
 .colors{
     display: flex;
@@ -1136,6 +1145,8 @@ body{
     .occasion p, .arrivals p, .colors p{
         display: flex;
         gap: 5px;
+        /* justify-content: center; */
+    align-items: center;
     }
     .colors input, .occasion input, .arrivals input{
         width: 11px;

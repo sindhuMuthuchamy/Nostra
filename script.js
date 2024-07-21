@@ -22,39 +22,7 @@ menubarClose.addEventListener("click",function(){
     sidenav.style.left="-50%"
 })
 
-// collection check box
 
-let check = document.getElementsByName("check")
-let container= document.getElementById("container")
-// let image1 = document.getElementById("imagecontainer1")
-var image1 = document.getElementById("imagecontainer1")
-var img1 = document.getElementById("img1")
-var name1 = document.getElementById("name1")
-var price1 = document.getElementById("price1")
-
-let image2 = document.getElementById("imagecontainer2")
-let image3 = document.getElementById("imagecontainer3")
-let image4 = document.getElementById("imagecontainer4")
-let image5 = document.getElementById("imagecontainer5")
-let image6 = document.getElementById("imagecontainer6")
-let image7 = document.getElementById("imagecontainer7")
-let image8 = document.getElementById("imagecontainer8")
-let image9 = document.getElementById("imagecontainer9")
-
-for(count = 0;count<check.length;count=count+1)
-    {
-    check[count].addEventListener("click",function(){
-        if(event.target.checked){
-            // console.log("checked")
-            console.log(image1)
-            container.innerHTML = image1
-        }
-        else{
-            console.log("unchecked")
-            container.textContent=image1
-        }
-    })
-}
 
 // collection
 var productContainer = document.getElementById("container")
@@ -79,3 +47,76 @@ search.addEventListener("keyup",function(){
 
     }
 })
+
+// slider
+// var sliderleftbutton = document.getElementById("slider-left-activate")
+// var sliderrightbutton =document.getElementById("slider-right-activate")
+// var sliderimage= document.querySelector(".slider-image-container")
+// var slidermargin=0
+
+// console.log(sliderleftbutton)
+
+// sliderrightbutton.addEventListener("click",function(){
+//     slidermargin=slidermargin+100
+
+//     if(slidermargin>200)
+//     {
+//         slidermargin=0
+//         sliderimage.style.marginLeft=0;
+//     }
+//     else{
+//         sliderimage.style.marginLeft="-"+slidermargin+"vw";
+//     }
+    
+   
+
+// }
+// )
+
+// sliderleftbutton.addEventListener("click",
+
+// function(){
+
+//     if(slidermargin==0)
+//     {
+       
+//         slidermargin=200
+//         sliderimage.style.marginLeft="-"+slidermargin+"vw";
+//     }
+//     else{
+
+//         slidermargin=slidermargin-100
+//     sliderimage.style.marginLeft="-"+slidermargin+"vw";
+//     }
+    
+    
+// }
+// )
+//check box
+document.addEventListener('DOMContentLoaded', ()=>{
+    var check_box = document.querySelectorAll(".check_box")
+    var product = document.querySelectorAll("#imagecontainer")
+
+    check_box.forEach(checkbox => {
+        checkbox.addEventListener('change', () => {
+            filter();
+        });
+    });
+    function filter() {
+        var categories = []
+        check_box.forEach(checkbox => {
+            if (checkbox.checked) {
+                categories.push(checkbox.value);
+            }
+        });
+
+        product.forEach(product => {
+            var productCategory = product.getAttribute('data-filter');
+            if (categories.includes(productCategory)) {
+                product.style.display = 'block';
+            } else {
+                product.style.display = 'none';
+            }
+        });
+    }
+});

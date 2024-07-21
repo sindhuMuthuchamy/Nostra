@@ -125,7 +125,8 @@ body{
     left: -50%;
     height: 100vh;
     position: fixed; top: 0; 
-    z-index: 5;  
+    z-index: 5; 
+    transition-duration:1s ; 
 
 }
 #menubar-close{
@@ -152,17 +153,18 @@ body{
 .slider{
     position: relative;
     width: 100%;
+    /* display: flex;
+    overflow: hidden; */
 }
 #slider-image{
     display: flex;
-    
+    /* transition: 2s;  */
+    /* width: 100%; */
 }
 #slider-image img{
     width: 100vw;
-    /* height: 100%; */
-    position: relative;
-    
-    
+    /* height: 50vh; */
+ position: relative;  
 }
 
 .slider-text{
@@ -211,7 +213,18 @@ body{
     top: 12rem; right: 5rem;
     z-index: 2;
     cursor: pointer;
+} 
+
+/* .slider-section {
+    overflow: hidden;
 }
+.slider-container{
+    display: flex;
+}
+.slider1 img, .slider2 img{
+    width: 100vw;
+    height: 50vh;
+} */
 
 @media screen and (max-width:800px){
     .slider-text{
@@ -507,6 +520,7 @@ body{
 /* newarrival */
 #newarrival{
     margin: 2rem 2rem 0 2rem;
+    
 }
 .newarrival-heading h1{
     font-size: xx-large;
